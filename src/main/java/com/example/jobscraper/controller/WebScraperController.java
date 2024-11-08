@@ -25,8 +25,8 @@ public class WebScraperController {
         return webScraperService.extractJoblinksAndJobtitles(searchTerm);
     }
 
-    @GetMapping("/scrapeandstore")
-    public String scrapeAndSaveJobs(@RequestParam String url) {
-        return webScraperService.scrapeAndSaveJobs(url);
+    @GetMapping("/scrapeandsavejobs")
+    public String scrapeAndSaveJobs(@RequestParam String searchTerm) {
+        return webScraperService.scrapeAndSaveJobs(searchTerm);
     }
 }
