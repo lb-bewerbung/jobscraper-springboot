@@ -20,11 +20,6 @@ public class WebScraperController {
         return webScraperService.scrapeWebsite(url);
     }
 
-    @GetMapping("/scrapestepstonesp")
-    public String scrapeStepstoneSearchPage(@RequestParam String url) {
-        return webScraperService.scrapeStepstoneSearchPage(url);
-    }
-
     @GetMapping("/extractjoblinks")
     public List<Map<String, String>> extractJoblinksAndJobtitles(@RequestParam String url) {
         return webScraperService.extractJoblinksAndJobtitles(url);
