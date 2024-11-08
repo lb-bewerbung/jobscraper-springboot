@@ -3,7 +3,7 @@ package com.example.jobscraper.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "jobs")  // Die Sammlung in MongoDB
+@Document(collection = "jobs")  // Die Collection in MongoDB, in der die Jobs gespeichert werden
 public class Job {
 
     @Id
