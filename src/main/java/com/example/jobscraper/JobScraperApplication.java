@@ -13,11 +13,3 @@ public class JobScraperApplication {
     }
 
 }
-
-@RestController
-class HelloController {
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello, Spring Boot!";
-    }
-}
