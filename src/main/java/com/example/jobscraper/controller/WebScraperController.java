@@ -21,7 +21,7 @@ public class WebScraperController {
     }
 
     @GetMapping("/extractjoblinks")
-    public List<Map<String, String>> extractJoblinksAndJobtitles(@RequestParam String url) {
-        return webScraperService.extractJoblinksAndJobtitles(url);
+    public List<Map<String, String>> extractJoblinksAndJobtitles(@RequestParam String searchTerm) {
+        return webScraperService.extractJoblinksAndJobtitles(searchTerm);
     }
 }
