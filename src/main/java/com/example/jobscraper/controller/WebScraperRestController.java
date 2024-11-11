@@ -41,6 +41,16 @@ public class WebScraperRestController {
         return webScraperService.saveJobDetails(jobUrl);
     }
 
+    @GetMapping("/updatejobdetails")
+    public String updateJobDetailsForUnsavedJobs() {
+        try {
+            webScraperService.updateJobDetailsForUnsavedJobs();
+            return "Jobdetails wurden erfolgreich aktualisiert!";
+        } catch (Exception e) {
+            return "Fehler beim Aktualisieren der Jobdetails: " + e.getMessage();
+        }
+    }
+
     @DeleteMapping("/deleteAllJobs")
     public String deleteAllJobs() {
         return webScraperService.deleteAllJobs();
