@@ -3,51 +3,69 @@
 <head>
   <title>Job Listings</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Styling für den Detailbereich */
+    .details {
+      display: none; /* Standardmäßig ausgeblendet */
+    }
+  </style>
 </head>
 <body>
 
 <div class="container mt-5">
-  <h2>Job Einträge</h2>
-  <div class="list-group">
-    <!-- Iteriere über die "jobs" Liste und zeige jedes Element an -->
-    <div th:each="job : ${jobs}" class="list-group-item">
+  <h2>Job Listings</h2>
+  <div class="form-group">
+    <input type="checkbox" id="details" name="details" checked onchange="toggleDetails(this)">
+    <label for="details">Details anzeigen</label>
+  </div>
+
+  <!-- Iteriere über die "jobs" Liste und zeige jedes Element an -->
+  <div th:each="job : ${jobs}" class="list-group">
+    <div class="list-group-item">
       <!-- Jobtitel als Link -->
       <h5>
         <a th:href="${job.jobLink}" th:text="${job.jobTitle}" class="font-weight-bold text-dark"></a>
       </h5>
-
-      <!-- Profile -->
       <p><strong>Profile:</strong></p>
       <ul>
         <li th:each="profile : ${job.profile}" th:text="${profile}"></li>
       </ul>
 
-      <!-- Jobbeschreibung -->
-      <p><strong>Job Description:</strong></p>
-      <ul>
-        <li th:each="description : ${job.jobDescription}" th:text="${description}"></li>
-      </ul>
+      <!-- Checkbox zum Ein-/Ausblenden der Details -->
+      <div class="form-group">
+        <input type="checkbox" class="toggle-details" onchange="toggleJobDetails(this)">
+        <label>Details anzeigen</label>
+      </div>
 
-      <!-- Benefits -->
-      <p><strong>Benefits:</strong></p>
-      <ul>
-        <li th:each="benefit : ${job.benefits}" th:text="${benefit}"></li>
-      </ul>
-
-      <!-- Introduction -->
-      <p><strong>Introduction:</strong></p>
-      <ul>
-        <li th:each="intro : ${job.introduction}" th:text="${intro}"></li>
-      </ul>
-
-      <!-- Additional Information -->
-      <p><strong>Additional Information:</strong></p>
-      <ul>
-        <li th:each="info : ${job.additionalInformation}" th:text="${info}"></li>
-      </ul>
+      <!-- Detailbereich -->
+      <div class="details">
+        <p><strong>Jobbeschreibung:</strong></p>
+        <ul>
+          <li th:each="description : ${job.jobDescription}" th:text="${description}"></li>
+        </ul>
+        <br>
+        <p><strong>Benefits:</strong></p>
+        <ul>
+          <li th:each="benefit : ${job.benefits}" th:text="${benefit}"></li>
+        </ul>
+        <br>
+        <p><strong>Unternehmen:</strong></p>
+        <ul>
+          <li th:each="intro : ${job.introduction}" th:text="${intro}"></li>
+        </ul>
+        <br>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  // Funktion, um die Details für jedes Jobangebot ein- oder auszublenden
+  function toggleJobDetails(checkbox) {
+    const details = checkbox.closest('.list-group-item').querySelector('.details');
+    details.style.display = checkbox.checked ? 'block' : 'none';
+  }
+</script>
 
 </body>
 </html>
