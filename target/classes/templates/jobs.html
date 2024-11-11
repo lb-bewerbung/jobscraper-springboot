@@ -8,21 +8,45 @@
 
 <div class="container mt-5">
   <h2>Job Listings</h2>
-  <table class="table table-bordered table-hover">
-    <thead class="thead-dark">
-    <tr>
-      <th>Job Title</th>
-      <th>Job Link</th>
-    </tr>
-    </thead>
-    <tbody>
+  <div class="list-group">
     <!-- Iteriere über die "jobs" Liste und zeige jedes Element an -->
-    <tr th:each="job : ${jobs}">
-      <td th:text="${job.jobTitle}"></td>
-      <td><a th:href="${job.jobLink}" th:text="${job.jobLink}" target="_blank"></a></td>
-    </tr>
-    </tbody>
-  </table>
+    <div th:each="job : ${jobs}" class="list-group-item">
+      <!-- Jobtitel als Link -->
+      <h5>
+        <a th:href="${job.jobLink}" th:text="${job.jobTitle}" class="font-weight-bold text-dark"></a>
+      </h5>
+
+      <!-- Profile -->
+      <p><strong>Profile:</strong></p>
+      <ul>
+        <li th:each="profile : ${job.profile}" th:text="${profile}"></li>
+      </ul>
+
+      <!-- Jobbeschreibung -->
+      <p><strong>Job Description:</strong></p>
+      <ul>
+        <li th:each="description : ${job.jobDescription}" th:text="${description}"></li>
+      </ul>
+
+      <!-- Benefits -->
+      <p><strong>Benefits:</strong></p>
+      <ul>
+        <li th:each="benefit : ${job.benefits}" th:text="${benefit}"></li>
+      </ul>
+
+      <!-- Introduction -->
+      <p><strong>Introduction:</strong></p>
+      <ul>
+        <li th:each="intro : ${job.introduction}" th:text="${intro}"></li>
+      </ul>
+
+      <!-- Additional Information -->
+      <p><strong>Additional Information:</strong></p>
+      <ul>
+        <li th:each="info : ${job.additionalInformation}" th:text="${info}"></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 </body>
