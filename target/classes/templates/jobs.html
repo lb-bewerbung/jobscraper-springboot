@@ -24,6 +24,7 @@
       <!-- Akkordeon zum Ein-/Ausklappen der Details -->
       <details>
         <summary>Details anzeigen</summary>
+        <br>
         <p><strong>Jobbeschreibung:</strong></p>
         <ul>
           <li th:each="description : ${job.jobDescription}" th:text="${description}"></li>
