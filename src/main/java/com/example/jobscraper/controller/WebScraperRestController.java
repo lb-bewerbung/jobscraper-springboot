@@ -51,6 +51,22 @@ public class WebScraperRestController {
         }
     }
 
+    @GetMapping("/scrapejobsforsearchterm")
+    public String scrapeAndSaveAndUpdateJobs(@RequestParam String searchTerm) {
+        try {
+            // 1. Alle Joblinks sammeln und speichern
+            webScraperService.scrapeAndSaveJobs(searchTerm);
+
+            // 2. Jobdetails für alle unspeicherten Jobs aktualisieren
+            webScraperService.updateJobDetailsForUnsavedJobs();
+
+            return "Joblinks wurden gesammelt und Jobdetails wurden erfolgreich aktualisiert!";
+        } catch (Exception e) {
+            return "Fehler: " + e.getMessage();
+        }
+    }
+
+
     @DeleteMapping("/deleteAllJobs")
     public String deleteAllJobs() {
         return webScraperService.deleteAllJobs();
