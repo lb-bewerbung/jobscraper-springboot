@@ -22,9 +22,10 @@ public class Job {
 
     // Getter und Setter
 
-    public Job(String jobTitle, String jobLink) {
+    public Job(String jobTitle, String jobLink, Boolean savedJobDetails) {
         this.jobTitle = jobTitle;
         this.jobLink = jobLink;
+        this.savedJobDetails = savedJobDetails;
     }
 
     public String getId() {
