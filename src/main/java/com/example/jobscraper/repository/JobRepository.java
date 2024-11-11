@@ -12,4 +12,6 @@ public interface JobRepository extends MongoRepository<Job, String> {
     Optional<Job> findByJobLink(String jobLink);
 
     List<Job> findBySavedJobDetailsFalse();
+
+    boolean existsByJobLink(String jobLink);
 }
