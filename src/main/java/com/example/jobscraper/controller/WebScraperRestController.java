@@ -30,6 +30,17 @@ public class WebScraperRestController {
         return webScraperService.scrapeAndSaveJobs(searchTerm);
     }
 
+    // Neue Route zum Extrahieren von Jobdetails
+    @GetMapping("/extractjobdetails")
+    public Map<String, List<String>> extractJobDetails(@RequestParam String jobUrl) {
+        return webScraperService.extractJobDetails(jobUrl);
+    }
+
+    @GetMapping("/savejobdetails")
+    public String saveJobDetails(@RequestParam String jobUrl) {
+        return webScraperService.saveJobDetails(jobUrl);
+    }
+
     @DeleteMapping("/deleteAllJobs")
     public String deleteAllJobs() {
         return webScraperService.deleteAllJobs();
