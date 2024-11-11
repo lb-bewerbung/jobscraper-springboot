@@ -18,6 +18,7 @@ public class Job {
     private List<String> profile;
     private List<String> benefits;
     private List<String> additionalInformation;
+    private Boolean savedJobDetails;
 
     // Getter und Setter
 
@@ -87,5 +88,10 @@ public class Job {
     public void setAdditionalInformation(List<String> additionalInformation) {
         this.additionalInformation = additionalInformation;
     }
+
+    public void setSavedJobDetails(Boolean savedJobDetails) {
+        this.savedJobDetails = savedJobDetails;
+    }
+
 }
 
