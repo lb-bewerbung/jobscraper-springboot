@@ -1,38 +1,25 @@
 package com.example.jobscraper.controller;
 
-import com.example.jobscraper.service.WebScraperService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
+import com.example.jobscraper.model.Job;
+import com.example.jobscraper.repository.JobRepository;
+import org.springframework.ui.Model;
 
 import java.util.List;
-import java.util.Map;
 
-@RestController
+@Controller
 public class WebScraperController {
-
     @Autowired
-    private WebScraperService webScraperService; // WebScraperService wird injiziert
+    private JobRepository jobRepository;
 
-    @GetMapping("/scrape")
-    public String scrapeWebsite(@RequestParam String url) {
-        return webScraperService.scrapeWebsite(url);
-    }
-
-    @GetMapping("/extractjoblinks")
-    public List<Map<String, String>> extractJoblinksAndJobtitles(@RequestParam String searchTerm) {
-        return webScraperService.extractJoblinksAndJobtitles(searchTerm);
-    }
-
-    @GetMapping("/scrapeandsavejobs")
-    public String scrapeAndSaveJobs(@RequestParam String searchTerm) {
-        return webScraperService.scrapeAndSaveJobs(searchTerm);
-    }
-
-    @DeleteMapping("/deleteAllJobs")
-    public String deleteAllJobs() {
-        return webScraperService.deleteAllJobs();
+    @GetMapping("/jobs")
+    public String viewJobs(Model model) {
+        List<Job> jobList = jobRepository.findAll();
+        model.addAttribute("jobs", jobList);
+        return "jobs"; // Thymeleaf template name (jobs.html)
     }
 }
+

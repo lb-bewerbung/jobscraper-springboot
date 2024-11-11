@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Job Listings</h2>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+    <tr>
+      <th>Job Title</th>
+      <th>Job Link</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iteriere über die "jobs" Liste und zeige jedes Element an -->
+    <tr th:each="job : ${jobs}">
+      <td th:text="${job.jobTitle}"></td>
+      <td><a th:href="${job.jobLink}" th:text="${job.jobLink}" target="_blank"></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
