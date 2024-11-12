@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Job Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Job Search</h2>
+
+  <!-- Suchformular -->
+  <form th:action="@{/search}" method="get" class="mb-5">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" class="form-control" id="jobTitle" name="jobTitle" th:value="${jobTitle}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="introduction">Introduction</label>
+        <input type="text" class="form-control" id="introduction" name="introduction" th:value="${introduction}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="jobDescription">Job Description</label>
+        <input type="text" class="form-control" id="jobDescription" name="jobDescription" th:value="${jobDescription}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="profile">Profile</label>
+        <input type="text" class="form-control" id="profile" name="profile" th:value="${profile}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="benefits">Benefits</label>
+        <input type="text" class="form-control" id="benefits" name="benefits" th:value="${benefits}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="additionalInformation">Additional Information</label>
+        <input type="text" class="form-control" id="additionalInformation" name="additionalInformation" th:value="${additionalInformation}">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <!-- Anzeige der Suchergebnisse nur, wenn eine Suche durchgeführt wurde -->
+  <div th:if="${searchPerformed}">
+    <h2>Search Results</h2>
+
+    <!-- Ergebnisse anzeigen, wenn gefunden -->
+    <div th:if="${jobs.size() > 0}" th:each="job : ${jobs}" class="list-group">
+      <div class="list-group-item">
+        <h5>
+          <a th:href="${job.jobLink}" th:text="${job.jobTitle}" class="font-weight-bold text-dark"></a>
+        </h5>
+        <p><strong>Profile:</strong></p>
+        <ul>
+          <li th:each="profile : ${job.profile}" th:text="${profile}"></li>
+        </ul>
+
+        <details>
+          <summary>Details anzeigen</summary>
+          <br>
+          <p><strong>Jobbeschreibung:</strong></p>
+          <ul>
+            <li th:each="description : ${job.jobDescription}" th:text="${description}"></li>
+          </ul>
+          <br>
+          <p><strong>Benefits:</strong></p>
+          <ul>
+            <li th:each="benefit : ${job.benefits}" th:text="${benefit}"></li>
+          </ul>
+          <br>
+          <p><strong>Unternehmen:</strong></p>
+          <ul>
+            <li th:each="intro : ${job.introduction}" th:text="${intro}"></li>
+          </ul>
+          <br>
+        </details>
+      </div>
+    </div>
+
+    <!-- Nachricht, wenn keine Ergebnisse gefunden wurden -->
+    <div th:if="${jobs.size() == 0}">
+      <p>Keine Jobs gefunden.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
