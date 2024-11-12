@@ -20,10 +20,12 @@ class JobSearchServiceTest {
     @Autowired
     private JobSearchService jobSearchService;
 
-    @Autowired
-    private JobRepository jobRepository;
+
 
 /* das hier können wir verwenden wenn wir eine produktivdatenbank und eine testdatenbank haben */
+//    @Autowired
+//    private JobRepository jobRepository;
+
 //    @BeforeEach
 //    void setUp() {
 //        // Bereinigt die Sammlung, um sicherzustellen, dass wir immer bei null starten
