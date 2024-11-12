@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 
 @Controller
-public class WebScraperController {
+public class SearchController {
     @Autowired
     private JobRepository jobRepository;
 
