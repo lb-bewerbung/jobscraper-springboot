@@ -62,6 +62,8 @@ public class SearchController {
         }
         // Ergebnisse und Suchparameter an das Model übergeben
         model.addAttribute("jobs", jobList);
+
+        // Felder sollen nach der Ausführung der Suche im Formular enthalten bleiben.
         model.addAttribute("jobTitle", jobTitle);
         model.addAttribute("jobLink", jobLink);
         model.addAttribute("introduction", introduction);
