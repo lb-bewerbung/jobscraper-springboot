@@ -15,8 +15,15 @@ import java.util.List;
 
 @Controller
 public class SearchController {
+
     @Autowired
     private JobRepository jobRepository;
+    private final JobSearchService jobSearchService;
+
+    @Autowired
+    public SearchController(JobSearchService jobSearchService) {
+        this.jobSearchService = jobSearchService;
+    }
 
     @GetMapping("/jobs")
     public String viewJobs(Model model) {
@@ -25,12 +32,6 @@ public class SearchController {
         return "jobs"; // Thymeleaf template name (jobs.html)
     }
 
-    private final JobSearchService jobSearchService;
-
-    @Autowired
-    public SearchController(JobSearchService jobSearchService) {
-        this.jobSearchService = jobSearchService;
-    }
 
     // Methode für das Suchformular und die Anzeige der Ergebnisse
     @GetMapping("/search")
