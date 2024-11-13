@@ -21,7 +21,6 @@ class JobSearchServiceTest {
     private JobSearchService jobSearchService;
 
 
-
 /* das hier können wir verwenden wenn wir eine produktivdatenbank und eine testdatenbank haben */
 //    @Autowired
 //    private JobRepository jobRepository;
