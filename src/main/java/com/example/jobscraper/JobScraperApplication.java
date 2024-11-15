@@ -19,6 +19,6 @@ public class JobScraperApplication {
 class HelloController {
     @GetMapping("/hello")
     public String sayHello() {
-        return "Willkommen | Job Scraper";
+        return "Willkommen2 | Job Scraper";
     }
 }
