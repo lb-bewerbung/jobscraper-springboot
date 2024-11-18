@@ -11,5 +11,11 @@ public class TestingTestFunctionTest {
         // Ein Dummy-Test, der immer "grün" ist
         assertTrue(true);
     }
+
+    @Test
+    public void testAlsoAlwaysGreen() {
+        // Ein Dummy-Test, der immer "grün" ist
+        assertTrue(true);
+    }
 }
 
