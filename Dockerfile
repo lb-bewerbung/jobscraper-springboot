@@ -1,5 +1,5 @@
 # Verwende ein Java-Laufzeit-Basisimage
-FROM openjdk:17-jdk-slim
+FROM maven:3.8-openjdk-17-slim
 
 # Arbeitsverzeichnis im Container setzen
 WORKDIR /app
