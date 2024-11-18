@@ -2,7 +2,8 @@
 FROM maven:3.8-openjdk-17-slim
 
 # Füge Nutzer spring hinzu und wechsle von root auf spring
-RUN addgroup -S spring && adduser -S spring -G spring
+RUN groupadd -f spring
+RUN adduser -S spring -G spring
 USER spring:spring
 
 # Arbeitsverzeichnis im Container setzen
