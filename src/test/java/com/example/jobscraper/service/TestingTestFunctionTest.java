@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestingTestFunctionTest {
 
-
     @Test
     public void testAlwaysGreen() {
         // Ein Dummy-Test, der immer "grün" ist
