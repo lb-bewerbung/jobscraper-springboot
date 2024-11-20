@@ -15,3 +15,6 @@ COPY target/*.jar app.jar
 
 # Exponiere den Port, auf dem dein Spring Boot läuft (Standard: 8080)
 EXPOSE 8080
+
+# Command zum Starten der Anwendung
+ENTRYPOINT ["java", "-jar", "app.jar"]
