@@ -9,7 +9,7 @@
 <div class="container mt-5">
   <h2>Job Search</h2>
 
-  <!-- Suchformular -->
+  <!-- Search form -->
   <form th:action="@{/search}" method="get" class="mb-5">
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -40,11 +40,11 @@
     <button type="submit" class="btn btn-primary">Search</button>
   </form>
 
-  <!-- Anzeige der Suchergebnisse nur, wenn eine Suche durchgeführt wurde -->
+  <!-- Only list results if search has been executed -->
   <div th:if="${searchPerformed}">
     <h2>Search Results</h2>
 
-    <!-- Ergebnisse anzeigen, wenn gefunden -->
+    <!-- Show results if available -->
     <div th:if="${jobs.size() > 0}" th:each="job : ${jobs}" class="list-group">
       <div class="list-group-item">
         <h5>
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <!-- Nachricht, wenn keine Ergebnisse gefunden wurden -->
+    <!-- Show message if no jobs have been found -->
     <div th:if="${jobs.size() == 0}">
       <p>Keine Jobs gefunden.</p>
     </div>

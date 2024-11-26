@@ -9,10 +9,9 @@
 <div class="container mt-5">
   <h2>Job Listings</h2>
 
-  <!-- Iteriere über die "jobs" Liste und zeige jedes Element an -->
+  <!-- Iterate over jobs list and show every element-->
   <div th:each="job : ${jobs}" class="list-group">
     <div class="list-group-item">
-      <!-- Jobtitel als Link -->
       <h5>
         <a th:href="${job.jobLink}" th:text="${job.jobTitle}" class="font-weight-bold text-dark"></a>
       </h5>
@@ -21,7 +20,7 @@
         <li th:each="profile : ${job.profile}" th:text="${profile}"></li>
       </ul>
 
-      <!-- Akkordeon zum Ein-/Ausklappen der Details -->
+      <!-- Accordion to show/hide details -->
       <details>
         <summary>Details anzeigen</summary>
         <br>
