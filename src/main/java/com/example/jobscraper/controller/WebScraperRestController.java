@@ -15,11 +15,6 @@ public class WebScraperRestController {
     @Autowired
     private WebScraperService webScraperService;
 
-    @GetMapping("/scrape")
-    public String scrapeWebsite(@RequestParam String url) {
-        return webScraperService.scrapeWebsite(url);
-    }
-
     @GetMapping("/extractjoblinks")
     public List<Map<String, String>> extractJoblinksAndJobtitles(@RequestParam String searchTerm) {
         return webScraperService.extractJoblinksAndJobtitles(searchTerm);
@@ -30,7 +25,6 @@ public class WebScraperRestController {
         return webScraperService.scrapeAndSaveJobs(searchTerm);
     }
 
-    // Neue Route zum Extrahieren von Jobdetails
     @GetMapping("/extractjobdetails")
     public Map<String, List<String>> extractJobDetails(@RequestParam String jobUrl) {
         return webScraperService.extractJobDetails(jobUrl);
@@ -45,27 +39,26 @@ public class WebScraperRestController {
     public String updateJobDetailsForUnsavedJobs() {
         try {
             webScraperService.updateJobDetailsForUnsavedJobs();
-            return "Jobdetails wurden erfolgreich aktualisiert!";
+            return "Job details have been successfully updated";
         } catch (Exception e) {
-            return "Fehler beim Aktualisieren der Jobdetails: " + e.getMessage();
+            return "Error while updating job details: " + e.getMessage();
         }
     }
 
     @GetMapping("/scrapejobsforsearchterm")
     public String scrapeAndSaveAndUpdateJobs(@RequestParam String searchTerm) {
         try {
-            // 1. Alle Joblinks sammeln und speichern
+            // 1. Collect joblinks of new jobs
             webScraperService.scrapeAndSaveJobs(searchTerm);
 
-            // 2. Jobdetails für alle unspeicherten Jobs aktualisieren
+            // 2. Scrape job details for new jobs
             webScraperService.updateJobDetailsForUnsavedJobs();
 
-            return "Joblinks wurden gesammelt und Jobdetails wurden erfolgreich aktualisiert!";
+            return "New Jobs have been updated successfully";
         } catch (Exception e) {
-            return "Fehler: " + e.getMessage();
+            return "Error: " + e.getMessage();
         }
     }
-
 
     @DeleteMapping("/deleteAllJobs")
     public String deleteAllJobs() {

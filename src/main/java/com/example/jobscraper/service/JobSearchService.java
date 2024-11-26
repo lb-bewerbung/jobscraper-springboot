@@ -21,7 +21,7 @@ public class JobSearchService {
                               String jobDescription, String profile,
                               String benefits, String additionalInformation) {
 
-        // Leere Strings statt `null`-Werten verwenden, um alle Dokumente zu matchen, falls ein Feld nicht gesetzt ist
+        // Prepare search parameters for db-query | replace null with empty string to avoid errors
         jobTitle = jobTitle != null ? jobTitle : "";
         jobLink = jobLink != null ? jobLink : "";
         introduction = introduction != null ? introduction : "";
@@ -30,7 +30,7 @@ public class JobSearchService {
         benefits = benefits != null ? benefits : "";
         additionalInformation = additionalInformation != null ? additionalInformation : "";
 
-        // Verwende das Repository, um die Abfrage auszuführen
+        // Use jobRepository to query
         return jobRepository.findJobsByCriteria(jobTitle, jobLink, introduction, jobDescription, profile, benefits, additionalInformation);
     }
 }

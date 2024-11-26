@@ -25,6 +25,7 @@ public class SearchController {
         this.jobSearchService = jobSearchService;
     }
 
+    // List all available jobs
     @GetMapping("/jobs")
     public String viewJobs(Model model) {
         List<Job> jobList = jobRepository.findAll();
@@ -32,8 +33,7 @@ public class SearchController {
         return "jobs"; // Thymeleaf template name (jobs.html)
     }
 
-
-    // Methode für das Suchformular und die Anzeige der Ergebnisse
+    // Method for search form and showing results
     @GetMapping("/search")
     public String searchJobs(@RequestParam(value = "jobTitle", required = false) String jobTitle,
                              @RequestParam(value = "jobLink", required = false) String jobLink,
@@ -44,7 +44,7 @@ public class SearchController {
                              @RequestParam(value = "additionalInformation", required = false) String additionalInformation,
                              Model model) {
 
-        // Prüfen, ob alle Parameter null oder leer sind (keine Filter)
+        // Check if one or more search criteria are given
         boolean noSearchCriteria = (jobTitle == null || jobTitle.isEmpty()) &&
                 (jobLink == null || jobLink.isEmpty()) &&
                 (introduction == null || introduction.isEmpty()) &&
@@ -56,15 +56,15 @@ public class SearchController {
         List<Job> jobList = new ArrayList<>(); // Leere Liste, falls keine Suche
         boolean searchPerformed = false;
 
-        // Nur wenn Suchkriterien gesetzt sind, wird die Suche ausgeführt
+        // Only search if criteria are given
         if (!noSearchCriteria) {
             jobList = jobSearchService.findJobs(jobTitle, jobLink, introduction, jobDescription, profile, benefits, additionalInformation);
             searchPerformed = true;
         }
-        // Ergebnisse und Suchparameter an das Model übergeben
+        // Hand over search results to model
         model.addAttribute("jobs", jobList);
 
-        // Felder sollen nach der Ausführung der Suche im Formular enthalten bleiben.
+        // Keep fields in form after search
         model.addAttribute("jobTitle", jobTitle);
         model.addAttribute("jobLink", jobLink);
         model.addAttribute("introduction", introduction);
@@ -74,7 +74,7 @@ public class SearchController {
         model.addAttribute("additionalInformation", additionalInformation);
         model.addAttribute("searchPerformed", searchPerformed); // Zeigt an, ob eine Suche durchgeführt wurde
 
-        return "search"; // Zeigt das Such-Template search.html an
+        return "search"; // Show search.html
     }
 }
 

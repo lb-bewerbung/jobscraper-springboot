@@ -5,11 +5,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "jobs")  // Die Collection in MongoDB, in der die Jobs gespeichert werden
+@Document(collection = "jobs") // MongoDB collection
 public class Job {
 
     @Id
-    private String id;  // MongoDB verwendet standardmäßig `_id` als Primärschlüssel
+    private String id;
 
     private String jobTitle;
     private String jobLink;
@@ -20,7 +20,7 @@ public class Job {
     private List<String> additionalInformation;
     private Boolean savedJobDetails;
 
-    // Getter und Setter
+    // Getter and setter
 
     public Job(String jobTitle, String jobLink, Boolean savedJobDetails) {
         this.jobTitle = jobTitle;

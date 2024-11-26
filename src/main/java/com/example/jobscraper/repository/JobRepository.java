@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-// Erweitert das MongoRepository für CRUD-Operationen
+// Extends MongoRepository for CRUD operations
 public interface JobRepository extends MongoRepository<Job, String> {
     Optional<Job> findByJobLink(String jobLink);
 
