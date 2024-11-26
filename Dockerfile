@@ -1,20 +1,20 @@
-# Verwende ein Java-Laufzeit-Basisimage
+# Use Java runtime base image
 FROM maven:3.8-openjdk-17-slim
 
-# Füge Nutzer spring hinzu und wechsle von root auf spring
+# Add spring user and continue with that user
 RUN groupadd -f spring
 RUN useradd -m -g spring spring
 USER spring:spring
 
-# Arbeitsverzeichnis im Container setzen
+# Set working directory in container
 WORKDIR /app
 
-# Kopiere das JAR-File ins Arbeitsverzeichnis
+# Copy jar-file and pom.xml into working directory
 COPY pom.xml .
 COPY target/*.jar app.jar
 
-# Exponiere den Port, auf dem dein Spring Boot läuft (Standard: 8080)
+# Expose Spring Boot port (8080)
 EXPOSE 8080
 
-# Command zum Starten der Anwendung
+# Start Spring Boot App at container start
 ENTRYPOINT ["java", "-jar", "app.jar"]
