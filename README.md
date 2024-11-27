@@ -1,7 +1,4 @@
 # Kurzbeschreibung
-Was ist die Aufgabe des Projekts?
-Warum ist das Projekt sinnvoll?
-
 Die Spring Boot App zielt darauf ab, die Effizienz der Jobsuche zu verbessern. Sie sammelt regelmäßig Stellenangebote nach
 festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können die
 Stellenangebote in einer erweiterten Suchfunktion durchsucht werden. (Verlinkung zu Bild)
