@@ -16,11 +16,11 @@ Java Spring Boot
 **Build**<br>
 Maven
 
-**Datenbank**<br>
-MongoDb
-
 **Container**<br>
 Docker
+
+**Datenbank**<br>
+MongoDb
 
 **Automatisierungsserver**<br>
 Jenkins (siehe <a href="https://github.com/lb-bewerbung/jobscraper-jenkins">Jobscraper-Jenkins</a>)
