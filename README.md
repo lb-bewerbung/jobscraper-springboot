@@ -31,7 +31,7 @@ Ansible (siehe <a href="https://github.com/lb-bewerbung/jobscraper-ansible">Jobs
 **Server / Webserver**<br>
 Ubuntu, Apache
 
-## Erweiterungsmöglichkeiten
+## Nächste Schritte
 Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
 
 **App:**
