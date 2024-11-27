@@ -12,37 +12,24 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
 </p>
 
 ## Verwendete Technologien 
-<div style="text-align: center;">
-  <table style="border: none; margin: 0 auto;">
-    <thead>
-      <tr>
-        <th><strong>Web-Code</strong></th>
-        <th><strong>Build</strong></th>
-        <th><strong>Container</strong></th>
-        <th><strong>Automatisierungsserver</strong></th>
-        <th><strong>Konfiguration</strong></th>
-        <th><strong>Server / Webserver</strong></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Java Spring Boot</td>
-        <td>Maven</td>
-        <td>Docker</td>
-        <td>Jenkins</td>
-        <td>Ansible</td>
-        <td>Ubuntu, Apache</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
-| **Web-Code**       | **Build**         | **Container**     | **Automatisierungsserver** | **Konfiguration** | **Server / Webserver** |
-|--------------------|-------------------|-------------------|----------------------------|-------------------|------------------------|
-| Java Spring Boot   | Maven             | Docker            | Jenkins                    | Ansible           | Ubuntu, Apache         |
+**Web-Code**<br>
+Java Spring Boot
 
+**Build**<br>
+Maven
 
+**Container**<br>
+Docker
 
+**Automatisierungsserver**<br>
+Jenkins
+
+**Konfiguration**<br>
+Ansible
+
+**Server / Webserver**<br>
+Ubuntu, Apache
 
 # Erweiterungsmöglichkeiten
 Im Folgenden werden Möglichkeiten zur Erweiterung der Software aufgezeigt
