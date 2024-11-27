@@ -3,7 +3,7 @@ Die Spring Boot App zielt darauf ab, die Effizienz der Jobsuche zu verbessern. S
 festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können spezifische
 Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlinkung zu Bild)
 
-### UML
+## UML
 <p align="center">
   <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart" width="200"></a>
   <a href="images/image2.png"><img src="images/image2.png" alt="Bild 2" width="200"></a>
@@ -11,43 +11,31 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
   <a href="images/image4.png"><img src="images/image4.png" alt="Bild 4" width="200"></a>
 </p>
 
-### Verwendete Technologien 
-<table border="0">
-  <thead>
-    <tr>
-      <th><strong>Technologie</strong></th>
-      <th><strong>Software</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Web-Code</strong></td>
-      <td>Java Spring Boot</td>
-    </tr>
-    <tr>
-      <td><strong>Build</strong></td>
-      <td>Maven</td>
-    </tr>
-    <tr>
-      <td><strong>Container</strong></td>
-      <td>Docker</td>
-    </tr>
-    <tr>
-      <td><strong>Automatisierungsserver</strong></td>
-      <td>Jenkins</td>
-    </tr>
-    <tr>
-      <td><strong>Konfiguration</strong></td>
-      <td>Ansible</td>
-    </tr>
-    <tr>
-      <td><strong>Server / Webserver</strong></td>
-      <td>Ubuntu, Apache</td>
-    </tr>
-  </tbody>
-</table>
-
-### Zusammenhang
+## Verwendete Technologien 
+<div style="text-align: center;">
+  <table style="border: none; margin: 0 auto;">
+    <thead>
+      <tr>
+        <th><strong>Web-Code</strong></th>
+        <th><strong>Build</strong></th>
+        <th><strong>Container</strong></th>
+        <th><strong>Automatisierungsserver</strong></th>
+        <th><strong>Konfiguration</strong></th>
+        <th><strong>Server / Webserver</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Java Spring Boot</td>
+        <td>Maven</td>
+        <td>Docker</td>
+        <td>Jenkins</td>
+        <td>Ansible</td>
+        <td>Ubuntu, Apache</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 # Erweiterungsmöglichkeiten
