@@ -5,8 +5,8 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
 
 ## UML
 <p align="center">
-  <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart.png" width="200"></a>
-  <a href="diagrams/System-architecture.png"><img src="diagrams/System-architecture.png" alt="diagrams/System-architecture.png" width="200"></a>
+  <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart.png" height="150" width="200"></a>
+  <a href="diagrams/System-architecture.png"><img src="diagrams/System-architecture.png" alt="diagrams/System-architecture.png" height="150" width="200"></a>
 </p>
 
 ## Verwendete Technologien
