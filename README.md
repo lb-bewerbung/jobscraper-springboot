@@ -31,6 +31,9 @@ Ansible
 **Server / Webserver**<br>
 Ubuntu, Apache
 
-# Erweiterungsmöglichkeiten
-Im Folgenden werden Möglichkeiten zur Erweiterung der Software aufgezeigt
+## Erweiterungsmöglichkeiten
+Es werden nachfolgend Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
+
+
+
 
