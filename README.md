@@ -5,20 +5,11 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
 
 ## UML
 <p align="center">
-  <a href="diagrams/CI-CD-Flowchart.png">
-    <img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart" width="200">
-    <br><em>CI-CD Flowchart</em>
-  </a>
-  <a href="diagrams/System-architecture.png">
-    <img src="diagrams/System-architecture.png" alt="System-architecture" width="200">
-    <br><em>System architecture</em>
-  </a>
-  
-
+  <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart.png" width="200"></a>
+  <a href="diagrams/System-architecture.png"><img src="diagrams/System-architecture.png" alt="diagrams/System-architecture.png" width="200"></a>
 </p>
 
-## Verwendete Technologien 
-
+## Verwendete Technologien
 **Web-Code**<br>
 Java Spring Boot
 
