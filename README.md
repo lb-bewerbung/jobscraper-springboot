@@ -23,10 +23,10 @@ Maven
 Docker
 
 **Automatisierungsserver**<br>
-Jenkins
+Jenkins (siehe <a href="https://github.com/lb-bewerbung/jobscraper-jenkins">Jobscraper-Jenkins</a>)
 
-**Konfiguration**<br>
-Ansible
+**Konfigurationsmanagement**<br>
+Ansible (siehe <a href="https://github.com/lb-bewerbung/jobscraper-ansible">Jobscraper-Ansible</a>)
 
 **Server / Webserver**<br>
 Ubuntu, Apache
