@@ -31,13 +31,17 @@ Ubuntu, Apache
 ## Erweiterungsmöglichkeiten
 Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
 
-**Funktionalität:**
+**App:**
 - Unittests für die alle Funktionen der App
 - Integrationstests für Datenbank und Website
+- SQL-Datenbank für mehr Effizienz und Stabilität mit wachsendem Datenbestand und -umfang
+
+**CI-CD**
+- Image Versionen mit CommitId erzeugen
+- Pipeline mit Git-tags steuern
 - Docker Image Speicherung und Deploy via Dockerhub
 - Metriken Report und Pipeline Steuerung via ChatOps (Slack, Teams etc.)
 - Container Orchestrierung mit Kubernetes
-- SQL-Datenbank für mehr Effizienz und Stabilität mit wachsendem Datenbestand und -umfang
-
+- 
 **Website:**
 - Notizen und Marker für Jobeinträge
