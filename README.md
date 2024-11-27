@@ -5,8 +5,11 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
 
 ## UML
 <p align="center">
-  <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart" width="200"></a>
-  <a href="images/image2.png"><img src="images/image2.png" alt="Bild 2" width="200"></a>
+  <a href="diagrams/CI-CD-Flowchart.png">
+    <img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart" width="200">
+    <br><em>CI-CD Flowchart</em>
+  </a>
+  <a href="diagrams/System-architecture.png.png"><img src="diagrams/System-architecture.png.png" alt="System-architecture" width="200"></a>
   <a href="images/image3.png"><img src="images/image3.png" alt="Bild 3" width="200"></a>
   <a href="images/image4.png"><img src="images/image4.png" alt="Bild 4" width="200"></a>
 </p>
@@ -32,7 +35,7 @@ Ansible (siehe <a href="https://github.com/lb-bewerbung/jobscraper-ansible">Jobs
 Ubuntu, Apache
 
 ## Erweiterungsmöglichkeiten
-Es werden nachfolgend Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
+Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
 
 
 
