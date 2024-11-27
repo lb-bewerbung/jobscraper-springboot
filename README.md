@@ -37,6 +37,12 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
   </table>
 </div>
 
+| **Web-Code**       | **Build**         | **Container**     | **Automatisierungsserver** | **Konfiguration** | **Server / Webserver** |
+|--------------------|-------------------|-------------------|----------------------------|-------------------|------------------------|
+| Java Spring Boot   | Maven             | Docker            | Jenkins                    | Ansible           | Ubuntu, Apache         |
+
+
+
 
 # Erweiterungsmöglichkeiten
 Im Folgenden werden Möglichkeiten zur Erweiterung der Software aufgezeigt
