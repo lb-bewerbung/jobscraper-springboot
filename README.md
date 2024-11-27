@@ -11,24 +11,41 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
   <a href="images/image4.png"><img src="images/image4.png" alt="Bild 4" width="200"></a>
 </p>
 
-### Verwendete Technologien
-**Web-Code**: Java Spring Boot
-
-**Build**: Maven
-
-## Container
-- Docker
-
-## Automatisierungsserver
-- Jenkins
-
-## Konfiguration
-- Ansible
-
-## Server / Webserver
-- Ubuntu
-- Apache
-
+### Verwendete Technologien 
+<table border="0">
+  <thead>
+    <tr>
+      <th><strong>Technologie</strong></th>
+      <th><strong>Software</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Web-Code</strong></td>
+      <td>Java Spring Boot</td>
+    </tr>
+    <tr>
+      <td><strong>Build</strong></td>
+      <td>Maven</td>
+    </tr>
+    <tr>
+      <td><strong>Container</strong></td>
+      <td>Docker</td>
+    </tr>
+    <tr>
+      <td><strong>Automatisierungsserver</strong></td>
+      <td>Jenkins</td>
+    </tr>
+    <tr>
+      <td><strong>Konfiguration</strong></td>
+      <td>Ansible</td>
+    </tr>
+    <tr>
+      <td><strong>Server / Webserver</strong></td>
+      <td>Ubuntu, Apache</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Zusammenhang
 
