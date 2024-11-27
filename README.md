@@ -9,9 +9,12 @@ Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlink
     <img src="diagrams/CI-CD-Flowchart.png" alt="CI-CD-Flowchart" width="200">
     <br><em>CI-CD Flowchart</em>
   </a>
-  <a href="diagrams/System-architecture.png.png"><img src="diagrams/System-architecture.png" alt="System-architecture" width="200"></a>
-  <a href="images/image3.png"><img src="images/image3.png" alt="Bild 3" width="200"></a>
-  <a href="images/image4.png"><img src="images/image4.png" alt="Bild 4" width="200"></a>
+  <a href="diagrams/System-architecture.png">
+    <img src="diagrams/System-architecture.png" alt="System-architecture" width="200">
+    <br><em>System architecture</em>
+  </a>
+  
+
 </p>
 
 ## Verwendete Technologien 
