@@ -16,6 +16,9 @@ Java Spring Boot
 **Build**<br>
 Maven
 
+**Datenbank**<br>
+MongoDb
+
 **Container**<br>
 Docker
 
@@ -42,6 +45,6 @@ Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die C
 - Docker Image Speicherung und Deploy via Dockerhub
 - Metriken Report und Pipeline Steuerung via ChatOps (Slack, Teams etc.)
 - Container Orchestrierung mit Kubernetes
-- 
+
 **Website:**
 - Notizen und Marker für Jobeinträge
