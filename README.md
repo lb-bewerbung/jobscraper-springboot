@@ -1,9 +1,9 @@
 # Kurzbeschreibung
 Die Spring Boot App zielt darauf ab, die Effizienz der Jobsuche zu verbessern. Sie sammelt regelmäßig Stellenangebote nach
-festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können die
-Stellenangebote in einer erweiterten Suchfunktion durchsucht werden. (Verlinkung zu Bild)
+festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können spezifische
+Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlinkung zu Bild)
 
-# UML
+### UML
 <p align="center">
   <a href="diagrams/CI-CD-Flowchart.png"><img src="diagrams/CI-CD-Flowchart.png" alt="Bild 1" width="200"></a>
   <a href="images/image2.png"><img src="images/image2.png" alt="Bild 2" width="200"></a>
@@ -11,11 +11,11 @@ Stellenangebote in einer erweiterten Suchfunktion durchsucht werden. (Verlinkung
   <a href="images/image4.png"><img src="images/image4.png" alt="Bild 4" width="200"></a>
 </p>
 
-# Verwendete Technologien
-## Web-Code
+### Verwendete Technologien
+#### Web-Code
 - Java Spring Boot
 
-## Build
+#### Build
 - Maven
 
 ## Container
