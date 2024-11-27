@@ -30,9 +30,14 @@ Ubuntu, Apache
 
 ## Erweiterungsmöglichkeiten
 Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
-- Unittests für Gesamtsystem
+
+**Funktionalität:**
+- Unittests für die alle Funktionen der App
 - Integrationstests für Datenbank und Website
-- Dockerimage Speicherung und Deploy via Dockerhub
+- Docker Image Speicherung und Deploy via Dockerhub
 - Metriken Report und Pipeline Steuerung via ChatOps (Slack, Teams etc.)
 - Container Orchestrierung mit Kubernetes
 - SQL-Datenbank für mehr Effizienz und Stabilität mit wachsendem Datenbestand und -umfang
+
+**Website:**
+- Notizen und Marker für Jobeinträge
