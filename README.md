@@ -1,5 +1,5 @@
 ## Was ist die Aufgabe des Projekts
-Die Spring Boot App zielt darauf ab, die Effizienz der Jobsuche zu verbessern. Sie sammelt regelmäßig Stellenangebote nach
+Die Spring Boot Applikation zielt darauf ab, die Effizienz der Jobsuche zu verbessern. Sie sammelt regelmäßig Stellenangebote nach
 festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können spezifische
 Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlinkung zu Bild)
 
@@ -30,7 +30,9 @@ Ubuntu, Apache
 
 ## Erweiterungsmöglichkeiten
 Es werden nachfolgend einige Optionen dargestellt, wie die Applikation und die CI-CD-Prozesse in zukünftigen Iterationen erweitert werden können.
-
-
-
-
+- Unittests für Gesamtsystem
+- Integrationstests für Datenbank und Website
+- Dockerimage Speicherung und Deploy via Dockerhub
+- Metriken Report und Pipeline Steuerung via ChatOps (Slack, Teams etc.)
+- Container Orchestrierung mit Kubernetes
+- SQL-Datenbank für mehr Effizienz und Stabilität mit wachsendem Datenbestand und -umfang
