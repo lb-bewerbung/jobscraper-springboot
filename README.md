@@ -1,7 +1,7 @@
 ## Was ist die Aufgabe des Projekts
 Die Spring Boot Applikation zielt darauf ab, die Effizienz der Jobsuche zu verbessern. Sie sammelt regelmäßig Stellenangebote nach
 festgelegten Suchbegriffen und organisiert deren Inhalte in einer Datenbank. Mithilfe einer simplen Weboberfläche können spezifische
-Stellenangebote in einer erweiterten Suchfunktion identifiziert werden. (Verlinkung zu Bild)
+Stellenangebote in einer erweiterten Suchfunktion identifiziert werden.
 
 ## UML
 <p align="center">
